@@ -1,0 +1,9 @@
+Hola
+Yo
+Me llamo
+Alan
+y esta es una prueba
+de
+como
+extraer info de un txt
+en python

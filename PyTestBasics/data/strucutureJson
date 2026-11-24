@@ -1,0 +1,11 @@
+Objeto principal ({ ... }): Contenedor general que agrupa toda la información del JSON.
+
+user_credentials: Es una clave cuyo valor es una lista (corchetes [...]) que permite almacenar múltiples elementos.
+
+Elementos de la lista ({ ... }): Cada objeto dentro de la lista representa a un usuario independiente con dos campos:
+
+userEmail: El correo electrónico registrado (por ejemplo, rahulshetty@gmail.com).
+
+userPassword: La contraseña asociada a ese correo (por ejemplo, IamKing@000).
+
+iwantThisProducts: Para definir una lista [ ] y en este caso son los productos deseados de cada usario

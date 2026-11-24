@@ -1,0 +1,68 @@
+//Ejecuta el archivo en especifico *No recibe logs
+#pytest test_Ejemploconftest.py
+
+//Ejecuta todos los archivos que contenga test_
+//y obten los logs o imprime los valores
+#pytest test_Ejemploconftest.py -s
+
+//Ejecuta el archivo en especifico y una funcion en especifico del archivo *No recibe logs
+#pytest test_Ejemploconftest.py::test_thirdTest
+
+//Ejecuta el archivo en especifico y su funcion en especifico del archivo y recibe los logs
+#pytest test_Ejemploconftest.py::test_thirdTest -s
+
+//Ejecuta el archivo en especifico y una funcion en especifico del archivo y hazlo en modo headless
+#pytest test_playwrightBasics.py::test_playwrightPageBrowser --headed
+
+//Ejecuta el archivo en especifico y ejecutalo en un navegador ya definido en el archivo global conftest
+#pytest test_LetsShopConfigTest.py --browser_name firefox
+
+//Ejecuta el archivo en especifico y ejecutalo en un navegador y en el ambiente
+//ya definidos en el archivo global conftest
+#pytest testAdvance/test_LetsShopConfigTest.py --browser_name firefox --ur_name SIT
+
+//Ejecuta todos los archivos que contenga test_
+//Siempre al crear un test debemos asignar el nombre al principio
+//test_Ejemploconftest
+//test_PyTestBasic
+#pytest
+
+
+//Ejecuta todos los 'archivos' que contenga el siguiente @tag
+#pytest -m tagName
+
+//Ejecuta todos los 'tests' que contenga el siguiente nombre
+#pytest -k name_test
+
+//Usar hace que Python agregue el directorio actual al inicio de sys.path:
+#python -m pytest
+
+//Marca LetsShoppingCart como Sources Root
+(clic derecho en la carpeta LetsShoppingCar >Mark Directory as >Sources Root).
+
+//Eejcuta los test en paralezitation
+//La paralelización en Playwright ejecuta múltiples pruebas de forma simultánea
+    //1 Instalar en cmd
+    #pip3 install pytest-xdist
+    //2 pytest -n numberOfTest
+
+//HTML Reports
+//Genera reportes en Playwright, del paso a paso, este reporte es externo a la herramienta de playwright
+    //1 Instalar en cmd
+    #pip install pytest-html
+    //2 Crear el HTML Report
+    #pytest test_Ejemploconftest.py --html=NameReport.html
+
+//Trace Viewer
+//Playwright Trace Viewer es una herramienta con interfaz gráfica que te ayuda a explorar los registros de seguimiento
+//de Playwright después de que se haya ejecutado el script
+//Extrae todos los pasos , y cada accion que se realizo en el test y los extrae en videos,imagenes
+    #pytest test_Ejemploconftest.py --tracing on
+
+//https://playwright.dev/python/docs/actionability
+    ///////Install asyncio
+    #pip install pytest-asyncio
+
+    //////Instalar BDD plugin
+    //https://pytest-bdd.readthedocs.io/en/stable/
+    #pip install pytest-bdd
